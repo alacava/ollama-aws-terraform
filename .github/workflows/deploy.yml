@@ -2,8 +2,8 @@ name: Deploy Ollama to AWS ECR
 
 on:
   push:
-    branches:
-      - main  # Runs on push to main branch
+    paths:
+      - 'Dockerfile'
 
 jobs:
   deploy:
