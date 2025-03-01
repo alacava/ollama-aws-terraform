@@ -28,6 +28,9 @@ resource "aws_ecs_task_definition" "ollama_task" {
       name  = "ollama"
       image = "${aws_ecr_repository.ollama_repo.repository_url}:latest"
       essential = true
+      environment = [
+      {"name": "OLLAMA_HOST", "value": "0.0.0.0"}
+      ]
       portMappings = [
         {
           containerPort = 11434
