@@ -3,5 +3,16 @@
   "extends": [
     "config:recommended"
   ],
-  "assignees": ["alacava"]
+  "assignees": ["alacava"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        ".*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    }
+  ]
 }
